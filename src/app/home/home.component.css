@@ -1,0 +1,32 @@
+/* div{
+    /* background-image: url("picc.jpg"); */
+   
+
+
+.carousel-control-prev-icon{
+  outline: black;
+  border: 1px solid black;
+}
+.lay{
+  background-image: url("picc.jpg");
+  background-size: cover;
+}
+h3{
+  color: blue;
+  font-style: oblique;
+}
+.boxed{
+  display:inline-block;
+  text-align: center;
+  margin-left: 50px;
+  margin-top: 50px;
+  color: black;
+ height: 300px;
+ width: 300px;
+border:3px solid black;
+}
+button:hover{
+
+background-color: yellow;
+
+}

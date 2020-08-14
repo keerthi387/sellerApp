@@ -1,0 +1,50 @@
+
+  
+
+<div class="reg">
+  <h2>LOGIN HERE</h2><br><br>
+      <form [formGroup]="regForm" (ngSubmit)="AddLogin();">
+        <label>
+         EmailId:</label>
+          <input type="email" formControlName="username">
+        
+
+        <div *ngIf="username.invalid&&(username.dirty||username.touched)" class="aler alert-danger">
+
+            <div *ngIf="username.errors.required">
+              Email is required
+            </div>
+
+            <div *ngIf="username.errors.minlength">
+             length is too short
+            </div>
+
+            <div *ngIf="username.errors.email">
+             Email is not valid
+            </div>
+
+        </div>
+          
+
+          <br><br>
+
+     
+        
+          <label>
+            password:</label>
+            <input type="password" formControlName="password">
+          
+          <div *ngIf="password.invalid&&(password.dirty||password.touched)" class="aler alert-danger">
+  
+            <div *ngIf="password.errors.required">
+              Enter Password
+            </div>
+  
+            <div *ngIf="password.errors.pattern">
+              Invalid password
+            </div>
+  
+           </div> <br><br>
+        <button type="submit" [disabled]="!regForm.valid">Submit</button>
+      </form>
+    </div>

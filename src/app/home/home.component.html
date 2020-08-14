@@ -1,0 +1,28 @@
+
+
+<div class="lay">
+  <h3>{{title}}</h3>
+   
+    <div *ngFor='let product of property' style="display: inline;">
+
+      <div class="boxed">
+       
+        Property Name:{{product.propertyName}}<br>
+        Property Code:{{product.propertyCode}}<br>
+      
+        <!-- {{product.description}}<br> -->
+        Rent:{{product.rent}}<br>
+       <!-- {{product.starrating}}<br> -->
+       <!-- {{product.imageUrl}}<br> -->
+       Address:{{product.address}}<br><br><br>
+       <!-- {{product.contactnumber}}<br> -->
+       <a><button type="button" style="color: blue;" class="btn btn-default" (click) = "readmore(product._id)">EDIT</button>  </a>
+       <button class="btn btn-default" style="color: blue;" routerLink="delete" (click)=" deleteProduct(product._id)">DELETE</button>
+       <button type="button" style="color: blue;" class="btn btn-default" (click) = "getData(product._id)">GET FULL DATA</button>  
+
+      </div>
+      
+    </div>
+
+</div>
+<router-outlet></router-outlet>

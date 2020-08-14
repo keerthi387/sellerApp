@@ -1,0 +1,90 @@
+
+<form [formGroup]="newForm" (ngSubmit)="newproperty();" >
+<input type="text" placeholder="enter name" name="n" [(ngModel)]='propertyitem.propertyName' formControlName="propertyName">
+
+     
+<div *ngIf="propertyName.invalid&&(propertyName.dirty||propertyName.touched)" class="aler alert-danger">
+
+    <div *ngIf="propertyName.errors.required">
+      PropertytName is required
+    </div>
+
+  </div>
+<br><br>
+<input type="text" placeholder="enter propertyCode" name="c" [(ngModel)]='propertyitem.propertyCode' formControlName="propertyCode">
+     
+<div *ngIf="propertyCode.invalid&&(propertyCode.dirty||propertyCode.touched)" class="aler alert-danger">
+
+  <div *ngIf="propertyCode.errors.required">
+    PropertytCode is required
+  </div>
+
+</div>
+<br><br>
+
+<input type="textarea" placeholder="Description" name="t" [(ngModel)]='propertyitem.description' formControlName="description">
+
+     
+<div *ngIf="description.invalid&&(description.dirty||description.touched)" class="aler alert-danger">
+
+  <div *ngIf="description.errors.required">
+    Descrption is required
+  </div>
+
+</div>
+<br><br>
+<input type="number" placeholder="Rent" name="g" [(ngModel)]='propertyitem.rent' formControlName="rent">
+     
+<div *ngIf="rent.invalid&&(rent.dirty||rent.touched)" class="aler alert-danger">
+
+  <div *ngIf="rent.errors.required">
+    rent is required
+  </div>
+
+</div>
+<br><br>
+<input type="text" placeholder="Starrating" name="s" [(ngModel)]='propertyitem.starrating' formControlName="starrating">
+     
+<div *ngIf="starrating.invalid&&(starrating.dirty||starrating.touched)" class="aler alert-danger">
+
+  <div *ngIf="starrating.errors.required">
+    starrating is required
+  </div>
+
+</div>
+<br><br>
+<input type="text" placeholder="Image" name="i" [(ngModel)]='propertyitem.imageUrl' formControlName="imageUrl">
+     
+<div *ngIf="imageUrl.invalid&&(imageUrl.dirty||imageUrl.touched)" class="aler alert-danger">
+
+  <div *ngIf="imageUrl.errors.required">
+    image is required
+  </div>
+
+</div>
+<br><br>
+
+<input type="text" placeholder="address" name="a" [(ngModel)]='propertyitem.address' formControlName="address">
+     
+<div *ngIf="address.invalid&&(address.dirty||address.touched)" class="aler alert-danger">
+
+  <div *ngIf="address.errors.required">
+    address is required
+  </div>
+
+</div>
+<br><br>
+
+<input type="text" placeholder="ContactNo" name="gi" [(ngModel)]='propertyitem.contactnumber' formControlName="contactnumber">
+
+     
+<div *ngIf="contactnumber.invalid&&(contactnumber.dirty||contactnumber.touched)" class="aler alert-danger">
+
+  <div *ngIf="contactnumber.errors.required">
+    contactnumber is required
+  </div>
+
+</div>
+<br><br>
+<button type="submit"  [disabled]="!newForm.valid">SUBMIT</button>
+</form>

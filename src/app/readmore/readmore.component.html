@@ -1,0 +1,20 @@
+
+
+
+  <form (ngSubmit)="update();">
+   <input type="text" name="name" value=" {{product?.propertyName}}" [(ngModel)]="product.propertyName"><br>
+    <input type="text" name="code" value="    {{product?.propertyCode}}" [(ngModel)]="product.propertyCode"><br>
+  
+    <input type="text" name="desc" value=" {{product?.description}}" [(ngModel)]="product.description"><br>
+   <input type="text" name="rent" value=" {{product?.rent}}" [(ngModel)]="product.rent"><br>
+   <input type="text" name="star" value=" {{product?.starrating}}" [(ngModel)]="product.starrating"><br>
+ <input type="text" name="image" value=" {{product?.imageUrl}}" [(ngModel)]="product.imageUrl"><br>
+ <input type="text" name="add" value="  {{product?.address}}" [(ngModel)]="product.address"><br>
+  <input type="text" name="cnum" value=" {{product?.contactnumber}}" [(ngModel)]="product.contactnumber"><br>
+
+  <!-- <button type="button">submit</button> -->
+  <input type="submit" value="Update">
+
+  </form>
+
+  
